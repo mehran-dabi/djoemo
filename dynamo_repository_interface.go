@@ -4,6 +4,8 @@ import (
 	"context"
 )
 
+//go:generate mockgen -source=dynamo_repository_interface.go -destination=./mock/dynamo_repository_interface.go -package=mock .
+
 // RepositoryInterface provides an interface to enable mocking the AWS dynamodb repository
 // for testing your code.
 type RepositoryInterface interface {
